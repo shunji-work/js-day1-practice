@@ -100,3 +100,57 @@ const newScore = scores.filter((num) => {
   return num >= 60;
 });
 console.log(newScore);
+
+/* 
+課題7
+各数字を2倍にした新しい配列を作る
+使うもの:
+map
+期待結果:
+[20, 50, 120, 160, 90]
+ */
+const numbers = [10, 25, 60, 80, 45];
+const result = numbers.map((num) => {
+  return num * 2;
+});
+
+/* 
+課題8
+60点以上が1つでもあるかを調べる
+使うもの:
+some
+期待結果:
+true
+ */
+const numbers2  = [10, 25, 60, 80, 45];
+const someResult = numbers2.some((num) => {
+  return num >= 60;
+})
+
+/* 
+const users = [
+  { name: "佐藤", age: 24 },
+  { name: "田中", age: 17 },
+  { name: "鈴木", age: 30 }
+];
+課題9
+18歳以上の人だけを抜き出す
+ */
+const users = [
+  { name: "佐藤", age: 24 },
+  { name: "田中", age: 17 },
+  { name: "鈴木", age: 30 }
+];
+const teenUsers =users.filter((n) =>{
+  return n.age >= 18;
+});
+
+/* 
+課題10
+名前だけの配列を作る
+これはオブジェクトと配列の練習です。
+今後の React にかなり効きます。
+ */
+const usersName = users.map ((nakami) =>{
+  return nakami.name;
+})
